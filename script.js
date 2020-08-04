@@ -1,3 +1,15 @@
+const imageContainer =  document.getElementById('image-container')
+const loader = document.getElementById('loader')
+
+let photosArray = [];
+
+// Unsplash API
+const count = 10;
+const apiKey = 'LqS8-X7H6wUPEo1sGPHokcWpsIzWvhrfbG0H3WWrPnY';
+const apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=${count}`;
+
+
+
 //Helper function to Set Attributes on DOM Elements
 function setAttributes(element, attributes) {
     for (const key in attributes) {
@@ -38,15 +50,7 @@ function displayPhotos() {
     });
 }
 
-const imageContainer =  document.getElementById('image-container')
-const loader = document.getElementById('loader')
 
-let photosArray = [];
-
-// Unsplash API
-const count = 10;
-const apiKey = 'LqS8-X7H6wUPEo1sGPHokcWpsIzWvhrfbG0H3WWrPnY';
-const apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=${count}`;
 
 // Get photos from Unsplash API
 async function getPhotos(){
