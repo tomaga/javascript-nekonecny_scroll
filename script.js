@@ -34,7 +34,7 @@ function setAttributes(element, attributes) {
 function displayPhotos() {
     imagesLoaded = 0;
     totalImages = photosArray.length;
-    console.log('total images', totalImages);
+    //console.log('total images', totalImages);
 
     //Run function for each object in photosArray
     photosArray.forEach((photo) => {
